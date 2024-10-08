@@ -4,6 +4,9 @@ import https from 'https';
 import Events from './resources/events';
 import Attributes from './resources/attributes';
 import Users from './resources/users';
+import Organisations from './resources/organisations';
+import Servers from './resources/servers';
+import Workers from './resources/workers';
 
 export class Client {
 
@@ -12,6 +15,9 @@ export class Client {
     public readonly events: Events = new Events(this);
     public readonly attributes: Attributes = new Attributes(this);
     public readonly users: Users = new Users(this);
+    public readonly organisations: Organisations = new Organisations(this);
+    public readonly servers: Servers = new Servers(this);
+    public readonly workers: Workers = new Workers(this);
     
     constructor(
         private readonly instanceUrl: string,

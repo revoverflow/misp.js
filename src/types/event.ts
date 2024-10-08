@@ -46,4 +46,72 @@ export type Event = {
 }
 */
 
+import { AttributeCategory } from "./attribute";
+import { SearchReturnFormat } from "./search";
+
 export type ThreatLevel = '1' | '2' | '3' | '4';
+
+export type EventRestSearchParams = {
+    page?: number;
+    limit?: number;
+    value?: string;
+    type?: string; // TODO: Add type for this
+    category?: AttributeCategory;
+    org?: string;
+    tags?: string[];
+    event_tags?: string[];
+    searchall?: string;
+    from?: string;
+    to?: string;
+    last?: number | string;
+    eventid?: string;
+    withAttachments?: boolean;
+    sharinggroup?: string[];
+    metadata?: boolean;
+    uuid?: string;
+    publish_timestamp?: string;
+    timestamp?: string;
+    published?: boolean;
+    enforceWarningList?: boolean;
+    sgReferenceOnly?: boolean;
+    requested_attributes?: string[];
+    includeContext?: boolean;
+    headerless?: boolean;
+    includeWarninglistHits?: boolean;
+    attackGalaxy?: string;
+    to_ids?: boolean;
+    deleted?: boolean;
+    excludeLocalTags?: boolean;
+    date?: string;
+    includeSightingdb?: boolean;
+    tag?: string;
+    object_relation?: string;
+    threat_level_id?: ThreatLevel;
+    returnFormat?: SearchReturnFormat;
+}
+
+export type EventIndexParams = {
+    page?: number;
+    limit?: number;
+    sort?: string;
+    direction?: 'asc' | 'desc';
+    minimal?: boolean;
+    attribute?: string;
+    eventid?: string;
+    datefrom?: string;
+    dateuntil?: string;
+    org?: string;
+    eventinfo?: string;
+    tag?: string;
+    tags?: string[];
+    distribution?: '0' | '1' | '2' | '3' | '4' | '5';
+    sharinggroup?: string;
+    analysis?: '0' | '1' | '2';
+    threatlevel?: ThreatLevel;
+    email?: string;
+    hasproposal?: '0' | '1';
+    timestamp?: string;
+    publish_timestamp?: string;
+    searchDatefrom?: string;
+    searchDateuntil?: string;
+}
