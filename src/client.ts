@@ -7,6 +7,11 @@ import Users from './resources/users';
 import Organisations from './resources/organisations';
 import Servers from './resources/servers';
 import Workers from './resources/workers';
+import Feeds from './resources/feeds';
+import Tags from './resources/tags';
+import AnalystData from './resources/analyst-data';
+import Logs from './resources/logs';
+import AuthKeys from './resources/auth-keys';
 
 export class Client {
 
@@ -18,7 +23,12 @@ export class Client {
     public readonly organisations: Organisations = new Organisations(this);
     public readonly servers: Servers = new Servers(this);
     public readonly workers: Workers = new Workers(this);
-    
+    public readonly feeds: Feeds = new Feeds(this);
+    public readonly tags: Tags = new Tags(this);
+    public readonly analystData: AnalystData = new AnalystData(this);
+    public readonly logs: Logs = new Logs(this);
+    public readonly authKeys: AuthKeys = new AuthKeys(this);
+
     constructor(
         private readonly instanceUrl: string,
         private readonly apiKey: string,
@@ -54,12 +64,6 @@ export class Client {
 
     async put(path: string, data: any) {
         const response = await this.client.put(path, data);
-        return response.data;
-    }
-
-    async getVersion() {
-        const response = await this.client.get('/servers/getVersion');
-
         return response.data;
     }
 

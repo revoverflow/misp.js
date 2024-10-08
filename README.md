@@ -25,6 +25,32 @@ client.events.list().then((events) => {
 });
 ```
 
+## Roadmap
+
+- [ ] Implement all resources
+    - [x] Events
+    - [x] Tags
+    - [x] Attributes
+    - [ ] Objects
+    - [x] Users
+    - [x] Organisations
+    - [x] Galaxies
+    - [ ] Galaxy clusters
+    - [ ] Taxonomies
+    - [x] Feeds
+    - [x] Servers
+    - [x] Workers
+    - [x] Analyst Data
+    - [x] Auth Keys
+    - [x] Logs
+    - [ ] Sightings
+    - [ ] User settings
+    - [ ] Event report
+    - [ ] Warninglists
+    - [ ] Sharing groups
+- [ ] Typed values for parameters and return values
+- [ ] Unit tests
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.

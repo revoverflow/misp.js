@@ -1,8 +1,9 @@
-// Entities
 export * from './attribute';
 export * from './event';
 export * from './worker';
 export * from './server';
-
-// Search
+export * from './feed';
+export * from './analyst-data';
+export * from './log';
 export * from './search';
+export * from './auth-key';

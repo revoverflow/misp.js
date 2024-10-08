@@ -1,57 +1,5 @@
-import type { AttributeCategory, SearchReturnFormat, ThreatLevel } from "../types";
+import type { AttributeContext, AttributePercentage, AttributeRestSearchParams } from "../types";
 import Resource from "./resource";
-
-type AttributeContext = 'type' | 'category';
-type AttributePercentage = 0 | 1;
-
-type AttributeRestSearchParams = {
-    page?: number;
-    limit?: number;
-    value?: string;
-    value1?: string;
-    value2?: string;
-    type?: string; // TODO: Add type for this
-    category?: AttributeCategory;
-    org?: string;
-    tags?: string[];
-    from?: string;
-    to?: string;
-    last?: number | string;
-    eventid?: string;
-    withAttachments?: boolean;
-    uuid?: string;
-    publish_timestamp?: string;
-    published?: boolean;
-    timestamp?: string;
-    attribute_timestamp?: string;
-    enforceWarningList?: boolean;
-    to_ids?: boolean;
-    deleted?: boolean;
-    event_timestamp?: string;
-    threat_level_id?: ThreatLevel;
-    eventinfo?: string;
-    sharinggroup?: string[];
-    decayingModel?: string;
-    score?: string;
-    first_seen?: string;
-    last_seen?: string;
-    includeEventUuid?: boolean;
-    includeEventTags?: boolean;
-    includeProposals?: boolean;
-    requested_attributes?: string[];
-    includeContext?: boolean;
-    headerless?: boolean;
-    includeWarninglistHits?: boolean;
-    attackGalaxy?: string;
-    object_relation?: string;
-    includeSightings?: boolean;
-    includeCorrelations?: boolean;
-    modelOverrides?: any;
-    includeDecayScore?: boolean;
-    includeFullModel?: boolean;
-    excludeDecayed?: boolean;
-    returnFormat?: SearchReturnFormat;
-}
 
 export default class Attributes extends Resource {
 
@@ -67,12 +15,12 @@ export default class Attributes extends Resource {
 
     // * Get attribute by id
     async get(id: string) {
-        return this.client.get(`/attributes/${id}`);
+        return this.client.get(`/attributes/view/${id}`);
     }
 
     // * Add attribute
     async add(eventId: string, data: any) {
-        return this.client.post(`/attributes/${eventId}`, data);
+        return this.client.post(`/attributes/add/${eventId}`, data);
     }
 
     // * Edit attribute
