@@ -1,0 +1,32 @@
+{
+  "name": "misp",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/bun": "^1.1.10",
+    "bun-plugin-dts": "^0.2.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "bun run build.mjs",
+    "prepublishOnly": "bun run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "misp",
+    "cert",
+    "threat",
+    "intelligence",
+    "security",
+    "threat-intelligence",
+    "threat-intel"
+  ],
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}
