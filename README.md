@@ -4,8 +4,6 @@ Node.js client for MISP (Malware Information Sharing Platform) API.
 
 The library is built in TypeScript and is compatible with both CommonJS and ES Modules.
 
-> This is a work in progress project and implements just a few resources for now.
-
 ## Installation
 
 ```bash
