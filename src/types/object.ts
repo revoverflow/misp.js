@@ -1,0 +1,63 @@
+import { AttributeCategory } from "./attribute";
+
+export type ObjectSearchParams = {
+    page?: number;
+    limit?: number;
+    quickFilter?: string;
+    searchall?: string;
+    timestamp?: string;
+    object_name?: string;
+    object_template_uuid?: string;
+    object_template_version?: string;
+    eventid?: string;
+    eventinfo?: string;
+    ignore?: boolean;
+    from?: string;
+    to?: string;
+    date?: string;
+    tags?: string[];
+    last?: string | number;
+    event_timestamp?: string;
+    publish_timestamp?: string;
+    org?: string;
+    uuid?: string;
+    value?: string;
+    type?: string; // TODO: AttributeType
+    category?: AttributeCategory;
+    object_relation?: string;
+    attribute_timestamp?: string;
+    first_seen?: string;
+    last_seen?: string;
+    comment?: string;
+    to_ids?: boolean;
+    published?: boolean;
+    deleted?: boolean;
+    withAttachments?: boolean;
+    enforceWarninglist?: boolean;
+    includeAllTags?: boolean;
+    includeEventUuid?: boolean;
+    include_event_uuid?: boolean;
+    includeEventTags?: boolean;
+    includeProposals?: boolean;
+    includeWarninglistHits?: boolean;
+    includeContext?: boolean;
+    includeSightings?: boolean;
+    includeSightingdb?: boolean;
+    includeCorrelations?: boolean;
+    includeDecayStore?: boolean;
+    includeFullModel?: boolean;
+    allow_proposal_blocking?: boolean;
+    metadata?: boolean;
+    attackGalaxy?: string;
+    excludeDecayed?: boolean;
+    decayingModel?: string;
+    modelOverrides?: {
+        lifetime?: number;
+        decay_speed?: number;
+        threshold?: number;
+        default_base_score?: number;
+        base_score_config?: any;
+    };
+    score?: string;
+    returnFormat?: 'json';
+}

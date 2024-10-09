@@ -7,3 +7,7 @@ export * from './analyst-data';
 export * from './log';
 export * from './search';
 export * from './auth-key';
+export * from './warninglist';
+export * from './object';
+export * from './galaxy-cluster';
+export * from './user-setting';

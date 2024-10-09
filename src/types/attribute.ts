@@ -25,7 +25,7 @@ export type AttributeContext =
 
 export type AttributePercentage = 0 | 1;
 
-export type AttributeRestSearchParams = {
+export type AttributeRestSearchFilter = {
     page?: number;
     limit?: number;
     value?: string;

@@ -1,4 +1,4 @@
-import type { AttributeContext, AttributePercentage, AttributeRestSearchParams } from "../types";
+import type { AttributeContext, AttributePercentage, AttributeRestSearchFilter } from "../types";
 import Resource from "./resource";
 
 export default class Attributes extends Resource {
@@ -9,7 +9,7 @@ export default class Attributes extends Resource {
     }
 
     // * (restSearch) Search attributes
-    async restSearch(params: AttributeRestSearchParams = {}) {
+    async restSearch(params: AttributeRestSearchFilter = {}) {
         return this.client.post(`/attributes/restSearch`, params);
     }
 
