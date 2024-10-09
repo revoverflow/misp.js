@@ -39,7 +39,7 @@ export default class EventReports extends Resource {
 
     // * Import event report from URL
     async import(eventId: string, url: string) {
-        return this.client.post(`/eventReports/inmportReportFromUrl/${eventId}`, { url });
+        return this.client.post(`/eventReports/importReportFromUrl/${eventId}`, { url });
     }
 
 }
